@@ -29,7 +29,8 @@ namespace federacionHemofiliaPacienteApp
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Id = (string)e.Parameter;
-            appBtn.Content = Id;
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            localSettings.Values["UserId"] = Id;
             base.OnNavigatedTo(e);
         }
     }

@@ -72,7 +72,15 @@ namespace federacionHemofiliaPacienteApp
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+                if (localSettings.Values["UserId"] == null)
+                {
+                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                }
+                else
+                {
+                    rootFrame.Navigate(typeof(RegisterApp), localSettings.Values["UserId"]);
+                }
             }
             // Ensure the current window is active
             Window.Current.Activate();

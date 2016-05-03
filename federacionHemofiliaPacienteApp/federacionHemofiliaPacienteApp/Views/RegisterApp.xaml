@@ -8,6 +8,9 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="appBtn" Content="Acabo de inyectarme" HorizontalAlignment="Stretch" Margin="10,136,10,165" VerticalAlignment="Stretch" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" RenderTransformOrigin="0.5,0.5" FontSize="29.333" />
+        <Button x:Name="appBtn" Content="Acabo de inyectarme" HorizontalAlignment="Stretch" Margin="10,165,10,181" VerticalAlignment="Stretch" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" RenderTransformOrigin="0.5,0.5" FontSize="29.333" Click="appBtn_Click" Foreground="#FF111111" />
+        <TextBlock x:Name="textBlock" Margin="10,71,0,0" TextWrapping="Wrap" Text="Cantidad" VerticalAlignment="Top" Height="43" FontSize="32" HorizontalAlignment="Left" Width="140"/>
+        <TextBox x:Name="cantidad" Margin="155,71,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="43" FontSize="26.667"/>
+        <Button x:Name="closeSession" Content="Cerrar Sesion" Margin="10,0,10,59" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="72" d:LayoutOverrides="LeftPosition, RightPosition" FontSize="26.667" Click="closeSession_Click"/>
     </Grid>
 </Page>
